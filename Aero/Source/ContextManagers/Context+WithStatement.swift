@@ -1,10 +1,7 @@
+// With Statements and a Context Protocol
+// An implementation of Python's `with` statement in swift. 
 //
-//  CoreDataWithContextManager.swift
-//  MyGeneRank
-//
-//  Created by Brian Schrader on 7/1/16.
-//  Copyright © 2016 Apple, Inc. All rights reserved.
-//
+// author: Brian Schrader
 
 import Foundation
 import CoreData

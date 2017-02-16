@@ -1,10 +1,8 @@
+// BackgroundModelUpdater
+// A convenient protocol that provides an easy,
+// thread-safe way of updating models via notifications.
 //
-//  BackgroundModelUpdater.swift
-//  MyGeneRank
-//
-//  Created by Brian Schrader on 8/9/16.
-//  Copyright © 2016 Apple, Inc. All rights reserved.
-//
+// author: Brian Schrader
 
 import Foundation
 

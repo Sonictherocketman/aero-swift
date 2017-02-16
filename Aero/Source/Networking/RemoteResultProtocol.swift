@@ -1,10 +1,8 @@
+// RemoteResultProtocol
+// A protcol that provides convenience functionality to models that 
+// map directly to RESTful endpoints.
 //
-//  RemoteResultProtocol.swift
-//  MyGeneRank
-//
-//  Created by Brian Schrader on 6/8/16.
-//  Copyright © 2016 Apple, Inc. All rights reserved.
-//
+// author: Brian Schrader
 
 import Foundation
 import Alamofire

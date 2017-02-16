@@ -1,10 +1,8 @@
+// Context Manager
+// A misleadingly named class that handles creating Object Contexts for Core Data.
+// TODO: Rename. The name conflicts with ContextManagers and the `with` statement.
 //
-//  DataController.swift
-//  MyGeneRank
-//
-//  Created by Brian Schrader on 6/29/16.
-//  Copyright © 2016 Apple, Inc. All rights reserved.
-//
+// author: Brian Schrader
 
 import CoreData
 

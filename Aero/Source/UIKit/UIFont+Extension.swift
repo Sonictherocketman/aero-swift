@@ -1,9 +1,6 @@
+// UIFont+Extension.swift
 //
-//  UIFont+Extension.swift
-//  MyGeneRank
-//
-//  Created by Brian Schrader on 2/2/17.
-//  Copyright © 2017 Apple, Inc. All rights reserved.
+// author: Brian Schrader
 //
 
 import Foundation

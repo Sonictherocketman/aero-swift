@@ -1,10 +1,7 @@
+// OAuthNetworking Service
+// A NetworkService subclass that provides automatic handling of OAuth tokens.
 //
-//  OAuthNetworkService.swift
-//  MyGeneRank
-//
-//  Created by Brian Schrader on 7/20/16.
-//  Copyright © 2016 Apple, Inc. All rights reserved.
-//
+// author: Brian Schrader
 
 import Foundation
 import Alamofire

@@ -1,10 +1,6 @@
+// UIColor+Extension
 //
-//  UIColor-Extension.swift
-//  MyGeneRank
-//
-//  Created by Brian Schrader on 8/31/16.
-//  Copyright © 2016 Apple, Inc. All rights reserved.
-//
+// author: Brian Schrader
 
 import UIKit
 

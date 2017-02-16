@@ -1,10 +1,7 @@
+// NetworkServiceManager
+// A singleton object that manages a global instance of a networking service.
 //
-//  NetworkService.swift
-//  MyGeneRank
-//
-//  Created by Brian Schrader on 5/24/16.
-//  Copyright © 2016 Scripps Translational Science Institute, Inc. All rights reserved.
-//
+// author: Brian Schrader
 
 import Alamofire
 import AlamofireObjectMapper

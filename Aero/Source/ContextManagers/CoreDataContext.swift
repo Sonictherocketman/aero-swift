@@ -1,10 +1,6 @@
+// Core Data Contexts
 //
-//  CoreDataContextManager.swift
-//  Aero-Swift
-//
-//  Created by Brian Schrader on 2/15/17.
-//
-//
+// author: Brian Schrader
 
 import Foundation
 import CoreData

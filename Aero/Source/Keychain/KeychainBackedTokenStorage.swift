@@ -1,10 +1,8 @@
+// KeychainBackedToken
+// A token that uses Keychain as it's backing store. Useful 
+// for storing encrypted OAuth Tokens.
 //
-//  KeychainBackedTokenStorage.swift
-//  MyGeneRank
-//
-//  Created by Brian Schrader on 8/9/16.
-//  Copyright © 2016 Apple, Inc. All rights reserved.
-//
+// author: Brian Schrader
 
 import Foundation
 import Locksmith

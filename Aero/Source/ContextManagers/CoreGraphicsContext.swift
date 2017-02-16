@@ -1,10 +1,6 @@
+// Core Graphics Contexts
 //
-//  CoreGraphicsContexts.swift
-//  MyGeneRank
-//
-//  Created by Brian Schrader on 9/1/16.
-//  Copyright © 2016 Apple, Inc. All rights reserved.
-//
+// author: Brian Schrader
 
 import Foundation
 import UIKit
