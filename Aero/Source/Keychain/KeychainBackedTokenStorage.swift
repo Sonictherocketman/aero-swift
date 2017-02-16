@@ -21,7 +21,7 @@ class KeychainBackedToken {
     
     var value: [String: Any]? {
         get {
-            if let values = Locksmith.loadDataForUserAccount(KeyChainIdentifier.UserAccount.rawValue) {
+            if let values = Locksmith.loadDataForUserAccount(userAccount: KeyChainIdentifier.UserAccount.rawValue) {
                 return values as [String : Any]?
             }
             return nil
@@ -29,13 +29,13 @@ class KeychainBackedToken {
         set {
             if let value = newValue {
                 do {
-                    try Locksmith.updateData(value, forUserAccount: KeyChainIdentifier.UserAccount.rawValue)
+                    try Locksmith.updateData(data: value, forUserAccount: KeyChainIdentifier.UserAccount.rawValue)
                 } catch {
                     assertionFailure(OAuthNetworkServiceError.StoredTokenPersitenceError.rawValue)
                 }
             } else {
                 do {
-                    try Locksmith.deleteDataForUserAccount(KeyChainIdentifier.UserAccount.rawValue)
+                    try Locksmith.deleteDataForUserAccount(userAccount: KeyChainIdentifier.UserAccount.rawValue)
                 } catch {
                     assertionFailure(OAuthNetworkServiceError.StoredTokenDeletionError.rawValue)
                 }

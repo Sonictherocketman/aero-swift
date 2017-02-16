@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DE26359407A82A7149983E0 /* Pods_Aero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55D6BEFFC1DDD74E7B0D9DD /* Pods_Aero.framework */; };
+		D6EA24121E55282C007F2B6D /* Aero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EA24081E55282B007F2B6D /* Aero.framework */; };
+		D6EA24171E55282C007F2B6D /* AeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24161E55282C007F2B6D /* AeroTests.swift */; };
+		D6EA24191E55282C007F2B6D /* Aero.h in Headers */ = {isa = PBXBuildFile; fileRef = D6EA240B1E55282B007F2B6D /* Aero.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6EA24471E552926007F2B6D /* Context+WithStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24321E552926007F2B6D /* Context+WithStatement.swift */; };
+		D6EA24481E552926007F2B6D /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24331E552926007F2B6D /* ContextManager.swift */; };
+		D6EA24491E552926007F2B6D /* CoreDataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24341E552926007F2B6D /* CoreDataContext.swift */; };
+		D6EA244A1E552926007F2B6D /* CoreGraphicsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24351E552926007F2B6D /* CoreGraphicsContext.swift */; };
+		D6EA244B1E552926007F2B6D /* DispatchGroupResultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24371E552926007F2B6D /* DispatchGroupResultStore.swift */; };
+		D6EA244C1E552926007F2B6D /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24391E552926007F2B6D /* Array+Extension.swift */; };
+		D6EA244D1E552926007F2B6D /* Dictionary+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA243A1E552926007F2B6D /* Dictionary+Extention.swift */; };
+		D6EA244E1E552926007F2B6D /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA243B1E552926007F2B6D /* Int+Extension.swift */; };
+		D6EA244F1E552926007F2B6D /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA243C1E552926007F2B6D /* NSData+Extension.swift */; };
+		D6EA24501E552926007F2B6D /* KeychainBackedTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA243E1E552926007F2B6D /* KeychainBackedTokenStorage.swift */; };
+		D6EA24511E552926007F2B6D /* BackgroundModelUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24401E552926007F2B6D /* BackgroundModelUpdater.swift */; };
+		D6EA24521E552926007F2B6D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24411E552926007F2B6D /* NetworkService.swift */; };
+		D6EA24531E552926007F2B6D /* OAuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24421E552926007F2B6D /* OAuthNetworkService.swift */; };
+		D6EA24541E552926007F2B6D /* RemoteResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24431E552926007F2B6D /* RemoteResultProtocol.swift */; };
+		D6EA24551E552926007F2B6D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24451E552926007F2B6D /* UIColor+Extension.swift */; };
+		D6EA24561E552926007F2B6D /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24461E552926007F2B6D /* UIFont+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6EA24131E55282C007F2B6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6EA23CF1E5524CB007F2B6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6EA24071E55282B007F2B6D;
+			remoteInfo = Aero;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		12E2E92EA0CAEF621F86867B /* Pods-Aero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aero/Pods-Aero.debug.xcconfig"; sourceTree = "<group>"; };
+		2EB75382D7F0CF622E454E64 /* Pods-Aero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aero.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aero/Pods-Aero.release.xcconfig"; sourceTree = "<group>"; };
+		D6EA24081E55282B007F2B6D /* Aero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Aero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6EA240B1E55282B007F2B6D /* Aero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aero.h; sourceTree = "<group>"; };
+		D6EA240C1E55282B007F2B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6EA24111E55282C007F2B6D /* AeroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6EA24161E55282C007F2B6D /* AeroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroTests.swift; sourceTree = "<group>"; };
+		D6EA24181E55282C007F2B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6EA24321E552926007F2B6D /* Context+WithStatement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Context+WithStatement.swift"; sourceTree = "<group>"; };
+		D6EA24331E552926007F2B6D /* ContextManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextManager.swift; sourceTree = "<group>"; };
+		D6EA24341E552926007F2B6D /* CoreDataContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataContext.swift; sourceTree = "<group>"; };
+		D6EA24351E552926007F2B6D /* CoreGraphicsContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsContext.swift; sourceTree = "<group>"; };
+		D6EA24371E552926007F2B6D /* DispatchGroupResultStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchGroupResultStore.swift; sourceTree = "<group>"; };
+		D6EA24391E552926007F2B6D /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		D6EA243A1E552926007F2B6D /* Dictionary+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extention.swift"; sourceTree = "<group>"; };
+		D6EA243B1E552926007F2B6D /* Int+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		D6EA243C1E552926007F2B6D /* NSData+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extension.swift"; sourceTree = "<group>"; };
+		D6EA243E1E552926007F2B6D /* KeychainBackedTokenStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainBackedTokenStorage.swift; sourceTree = "<group>"; };
+		D6EA24401E552926007F2B6D /* BackgroundModelUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundModelUpdater.swift; sourceTree = "<group>"; };
+		D6EA24411E552926007F2B6D /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D6EA24421E552926007F2B6D /* OAuthNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthNetworkService.swift; sourceTree = "<group>"; };
+		D6EA24431E552926007F2B6D /* RemoteResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteResultProtocol.swift; sourceTree = "<group>"; };
+		D6EA24451E552926007F2B6D /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		D6EA24461E552926007F2B6D /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		F55D6BEFFC1DDD74E7B0D9DD /* Pods_Aero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D6EA24041E55282B007F2B6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DE26359407A82A7149983E0 /* Pods_Aero.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EA240E1E55282C007F2B6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EA24121E55282C007F2B6D /* Aero.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		599E0A22C71CABAA644363B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12E2E92EA0CAEF621F86867B /* Pods-Aero.debug.xcconfig */,
+				2EB75382D7F0CF622E454E64 /* Pods-Aero.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D6EA23CE1E5524CB007F2B6D = {
+			isa = PBXGroup;
+			children = (
+				D6EA240A1E55282B007F2B6D /* Aero */,
+				D6EA24151E55282C007F2B6D /* AeroTests */,
+				D6EA24091E55282B007F2B6D /* Products */,
+				599E0A22C71CABAA644363B2 /* Pods */,
+				E799582C4355BBEEB09C4C12 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D6EA24091E55282B007F2B6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6EA24081E55282B007F2B6D /* Aero.framework */,
+				D6EA24111E55282C007F2B6D /* AeroTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6EA240A1E55282B007F2B6D /* Aero */ = {
+			isa = PBXGroup;
+			children = (
+				D6EA24301E552926007F2B6D /* Source */,
+				D6EA240B1E55282B007F2B6D /* Aero.h */,
+				D6EA240C1E55282B007F2B6D /* Info.plist */,
+			);
+			path = Aero;
+			sourceTree = "<group>";
+		};
+		D6EA24151E55282C007F2B6D /* AeroTests */ = {
+			isa = PBXGroup;
+			children = (
+				D6EA24161E55282C007F2B6D /* AeroTests.swift */,
+				D6EA24181E55282C007F2B6D /* Info.plist */,
+			);
+			path = AeroTests;
+			sourceTree = "<group>";
+		};
+		D6EA24301E552926007F2B6D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D6EA24311E552926007F2B6D /* ContextManagers */,
+				D6EA24361E552926007F2B6D /* Dispatch */,
+				D6EA24381E552926007F2B6D /* Foundation */,
+				D6EA243D1E552926007F2B6D /* Keychain */,
+				D6EA243F1E552926007F2B6D /* Networking */,
+				D6EA24441E552926007F2B6D /* UIKit */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D6EA24311E552926007F2B6D /* ContextManagers */ = {
+			isa = PBXGroup;
+			children = (
+				D6EA24321E552926007F2B6D /* Context+WithStatement.swift */,
+				D6EA24331E552926007F2B6D /* ContextManager.swift */,
+				D6EA24341E552926007F2B6D /* CoreDataContext.swift */,
+				D6EA24351E552926007F2B6D /* CoreGraphicsContext.swift */,
+			);
+			path = ContextManagers;
+			sourceTree = "<group>";
+		};
+		D6EA24361E552926007F2B6D /* Dispatch */ = {
+			isa = PBXGroup;
+			children = (
+				D6EA24371E552926007F2B6D /* DispatchGroupResultStore.swift */,
+			);
+			path = Dispatch;
+			sourceTree = "<group>";
+		};
+		D6EA24381E552926007F2B6D /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				D6EA24391E552926007F2B6D /* Array+Extension.swift */,
+				D6EA243A1E552926007F2B6D /* Dictionary+Extention.swift */,
+				D6EA243B1E552926007F2B6D /* Int+Extension.swift */,
+				D6EA243C1E552926007F2B6D /* NSData+Extension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		D6EA243D1E552926007F2B6D /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				D6EA243E1E552926007F2B6D /* KeychainBackedTokenStorage.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		D6EA243F1E552926007F2B6D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D6EA24401E552926007F2B6D /* BackgroundModelUpdater.swift */,
+				D6EA24411E552926007F2B6D /* NetworkService.swift */,
+				D6EA24421E552926007F2B6D /* OAuthNetworkService.swift */,
+				D6EA24431E552926007F2B6D /* RemoteResultProtocol.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D6EA24441E552926007F2B6D /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D6EA24451E552926007F2B6D /* UIColor+Extension.swift */,
+				D6EA24461E552926007F2B6D /* UIFont+Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E799582C4355BBEEB09C4C12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F55D6BEFFC1DDD74E7B0D9DD /* Pods_Aero.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D6EA24051E55282B007F2B6D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EA24191E55282C007F2B6D /* Aero.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D6EA24071E55282B007F2B6D /* Aero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6EA241A1E55282C007F2B6D /* Build configuration list for PBXNativeTarget "Aero" */;
+			buildPhases = (
+				D2C5FD231CCE317DAFDD77F4 /* [CP] Check Pods Manifest.lock */,
+				D6EA24031E55282B007F2B6D /* Sources */,
+				D6EA24041E55282B007F2B6D /* Frameworks */,
+				D6EA24051E55282B007F2B6D /* Headers */,
+				D6EA24061E55282B007F2B6D /* Resources */,
+				F165A97D27B23990F0B30A00 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aero;
+			productName = Aero;
+			productReference = D6EA24081E55282B007F2B6D /* Aero.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D6EA24101E55282C007F2B6D /* AeroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6EA241D1E55282C007F2B6D /* Build configuration list for PBXNativeTarget "AeroTests" */;
+			buildPhases = (
+				D6EA240D1E55282C007F2B6D /* Sources */,
+				D6EA240E1E55282C007F2B6D /* Frameworks */,
+				D6EA240F1E55282C007F2B6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6EA24141E55282C007F2B6D /* PBXTargetDependency */,
+			);
+			name = AeroTests;
+			productName = AeroTests;
+			productReference = D6EA24111E55282C007F2B6D /* AeroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D6EA23CF1E5524CB007F2B6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				TargetAttributes = {
+					D6EA24071E55282B007F2B6D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MF5QXK8AUE;
+						ProvisioningStyle = Automatic;
+					};
+					D6EA24101E55282C007F2B6D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MF5QXK8AUE;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D6EA23D21E5524CB007F2B6D /* Build configuration list for PBXProject "Aero-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D6EA23CE1E5524CB007F2B6D;
+			productRefGroup = D6EA24091E55282B007F2B6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6EA24071E55282B007F2B6D /* Aero */,
+				D6EA24101E55282C007F2B6D /* AeroTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6EA24061E55282B007F2B6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EA240F1E55282C007F2B6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D2C5FD231CCE317DAFDD77F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F165A97D27B23990F0B30A00 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aero/Pods-Aero-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D6EA24031E55282B007F2B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EA244B1E552926007F2B6D /* DispatchGroupResultStore.swift in Sources */,
+				D6EA24511E552926007F2B6D /* BackgroundModelUpdater.swift in Sources */,
+				D6EA244E1E552926007F2B6D /* Int+Extension.swift in Sources */,
+				D6EA24531E552926007F2B6D /* OAuthNetworkService.swift in Sources */,
+				D6EA24471E552926007F2B6D /* Context+WithStatement.swift in Sources */,
+				D6EA24491E552926007F2B6D /* CoreDataContext.swift in Sources */,
+				D6EA244C1E552926007F2B6D /* Array+Extension.swift in Sources */,
+				D6EA244D1E552926007F2B6D /* Dictionary+Extention.swift in Sources */,
+				D6EA244F1E552926007F2B6D /* NSData+Extension.swift in Sources */,
+				D6EA24551E552926007F2B6D /* UIColor+Extension.swift in Sources */,
+				D6EA24481E552926007F2B6D /* ContextManager.swift in Sources */,
+				D6EA24501E552926007F2B6D /* KeychainBackedTokenStorage.swift in Sources */,
+				D6EA24521E552926007F2B6D /* NetworkService.swift in Sources */,
+				D6EA24541E552926007F2B6D /* RemoteResultProtocol.swift in Sources */,
+				D6EA24561E552926007F2B6D /* UIFont+Extension.swift in Sources */,
+				D6EA244A1E552926007F2B6D /* CoreGraphicsContext.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EA240D1E55282C007F2B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EA24171E55282C007F2B6D /* AeroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6EA24141E55282C007F2B6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6EA24071E55282B007F2B6D /* Aero */;
+			targetProxy = D6EA24131E55282C007F2B6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D6EA23D31E5524CB007F2B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		D6EA23D41E5524CB007F2B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+			};
+			name = Release;
+		};
+		D6EA241B1E55282C007F2B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12E2E92EA0CAEF621F86867B /* Pods-Aero.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MF5QXK8AUE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Aero/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianschrader.Aero;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D6EA241C1E55282C007F2B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EB75382D7F0CF622E454E64 /* Pods-Aero.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MF5QXK8AUE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Aero/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianschrader.Aero;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D6EA241E1E55282C007F2B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = MF5QXK8AUE;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = AeroTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianschrader.AeroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D6EA241F1E55282C007F2B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = MF5QXK8AUE;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = AeroTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianschrader.AeroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6EA23D21E5524CB007F2B6D /* Build configuration list for PBXProject "Aero-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6EA23D31E5524CB007F2B6D /* Debug */,
+				D6EA23D41E5524CB007F2B6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6EA241A1E55282C007F2B6D /* Build configuration list for PBXNativeTarget "Aero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6EA241B1E55282C007F2B6D /* Debug */,
+				D6EA241C1E55282C007F2B6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6EA241D1E55282C007F2B6D /* Build configuration list for PBXNativeTarget "AeroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6EA241E1E55282C007F2B6D /* Debug */,
+				D6EA241F1E55282C007F2B6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6EA23CF1E5524CB007F2B6D /* Project object */;
+}
