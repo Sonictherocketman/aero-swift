@@ -20,7 +20,7 @@
 		D6EA24B21E5531C4007F2B6D /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA243B1E552926007F2B6D /* Int+Extension.swift */; };
 		D6EA24B31E5531C4007F2B6D /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA243C1E552926007F2B6D /* NSData+Extension.swift */; };
 		D6EA24B41E5531C4007F2B6D /* KeychainBackedTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA243E1E552926007F2B6D /* KeychainBackedTokenStorage.swift */; };
-		D6EA24B51E5531C4007F2B6D /* BackgroundModelUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24401E552926007F2B6D /* BackgroundModelUpdater.swift */; };
+		D6EA24B51E5531C4007F2B6D /* ModelSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24401E552926007F2B6D /* ModelSyncService.swift */; };
 		D6EA24B61E5531C4007F2B6D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24411E552926007F2B6D /* NetworkService.swift */; };
 		D6EA24B71E5531C4007F2B6D /* OAuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24421E552926007F2B6D /* OAuthNetworkService.swift */; };
 		D6EA24B81E5531C4007F2B6D /* RemoteResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24431E552926007F2B6D /* RemoteResultProtocol.swift */; };
@@ -46,7 +46,7 @@
 		D6EA243B1E552926007F2B6D /* Int+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		D6EA243C1E552926007F2B6D /* NSData+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extension.swift"; sourceTree = "<group>"; };
 		D6EA243E1E552926007F2B6D /* KeychainBackedTokenStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainBackedTokenStorage.swift; sourceTree = "<group>"; };
-		D6EA24401E552926007F2B6D /* BackgroundModelUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundModelUpdater.swift; sourceTree = "<group>"; };
+		D6EA24401E552926007F2B6D /* ModelSyncService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSyncService.swift; sourceTree = "<group>"; };
 		D6EA24411E552926007F2B6D /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D6EA24421E552926007F2B6D /* OAuthNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthNetworkService.swift; sourceTree = "<group>"; };
 		D6EA24431E552926007F2B6D /* RemoteResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteResultProtocol.swift; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 		D6EA243F1E552926007F2B6D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				D6EA24401E552926007F2B6D /* BackgroundModelUpdater.swift */,
+				D6EA24401E552926007F2B6D /* ModelSyncService.swift */,
 				D6EA24411E552926007F2B6D /* NetworkService.swift */,
 				D6EA24421E552926007F2B6D /* OAuthNetworkService.swift */,
 				D6EA24431E552926007F2B6D /* RemoteResultProtocol.swift */,
@@ -401,7 +401,7 @@
 				D6EA24B21E5531C4007F2B6D /* Int+Extension.swift in Sources */,
 				D6EA24B31E5531C4007F2B6D /* NSData+Extension.swift in Sources */,
 				D6EA24B41E5531C4007F2B6D /* KeychainBackedTokenStorage.swift in Sources */,
-				D6EA24B51E5531C4007F2B6D /* BackgroundModelUpdater.swift in Sources */,
+				D6EA24B51E5531C4007F2B6D /* ModelSyncService.swift in Sources */,
 				D6EA24B61E5531C4007F2B6D /* NetworkService.swift in Sources */,
 				D6EA24B71E5531C4007F2B6D /* OAuthNetworkService.swift in Sources */,
 				D6EA24B81E5531C4007F2B6D /* RemoteResultProtocol.swift in Sources */,
