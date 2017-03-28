@@ -6,7 +6,7 @@
 
 import CoreData
 
-class ContextManager {
+public class ContextManager {
     
     static var sharedManagedObjectContext: NSManagedObjectContext = ContextManager.getManagedObjectContext(type: .mainQueueConcurrencyType)
     

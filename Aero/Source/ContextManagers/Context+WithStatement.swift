@@ -6,12 +6,12 @@
 import Foundation
 import CoreData
 
-protocol Context {
+public protocol Context {
     func enter()
     func exit(_ error: Error?)
 }
 
-func with<C: Context>(_ context: C?, block:(_ context: C) throws -> () ) {
+public func with<C: Context>(_ context: C?, block:(_ context: C) throws -> () ) {
     guard let context = context else { return }
     
     context.enter()

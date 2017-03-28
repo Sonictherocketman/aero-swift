@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A87CC2CC89B4AECDED7B877 /* Pods_Aero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55D6BEFFC1DDD74E7B0D9DD /* Pods_Aero.framework */; };
+		D69C02261E73362B00A30F65 /* ModelSyncServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69C02251E73362B00A30F65 /* ModelSyncServiceDelegate.swift */; };
 		D6EA24171E55282C007F2B6D /* AeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24161E55282C007F2B6D /* AeroTests.swift */; };
 		D6EA24A41E5531A8007F2B6D /* Aero.h in Headers */ = {isa = PBXBuildFile; fileRef = D6EA24961E5531A8007F2B6D /* Aero.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6EA24AB1E5531C4007F2B6D /* Context+WithStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24321E552926007F2B6D /* Context+WithStatement.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		12E2E92EA0CAEF621F86867B /* Pods-Aero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aero/Pods-Aero.debug.xcconfig"; sourceTree = "<group>"; };
 		2EB75382D7F0CF622E454E64 /* Pods-Aero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aero.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aero/Pods-Aero.release.xcconfig"; sourceTree = "<group>"; };
+		D69C02251E73362B00A30F65 /* ModelSyncServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSyncServiceDelegate.swift; sourceTree = "<group>"; };
 		D6EA240B1E55282B007F2B6D /* Aero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aero.h; sourceTree = "<group>"; };
 		D6EA240C1E55282B007F2B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6EA24111E55282C007F2B6D /* AeroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				D6EA24401E552926007F2B6D /* ModelSyncService.swift */,
+				D69C02251E73362B00A30F65 /* ModelSyncServiceDelegate.swift */,
 				D6EA24411E552926007F2B6D /* NetworkService.swift */,
 				D6EA24421E552926007F2B6D /* OAuthNetworkService.swift */,
 				D6EA24431E552926007F2B6D /* RemoteResultProtocol.swift */,
@@ -407,6 +410,7 @@
 				D6EA24B81E5531C4007F2B6D /* RemoteResultProtocol.swift in Sources */,
 				D6EA24B91E5531C4007F2B6D /* UIColor+Extension.swift in Sources */,
 				D6EA24BA1E5531C4007F2B6D /* UIFont+Extension.swift in Sources */,
+				D69C02261E73362B00A30F65 /* ModelSyncServiceDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

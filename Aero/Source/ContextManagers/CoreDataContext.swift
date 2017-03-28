@@ -6,7 +6,7 @@ import Foundation
 import CoreData
 
 
-struct CoreDataContext: Context {
+public struct CoreDataContext: Context {
     var coreDataContext: NSManagedObjectContext
     
     init() {
@@ -21,11 +21,11 @@ struct CoreDataContext: Context {
         }
     }
     
-    func enter() {
+    public func enter() {
         //Do Nothing
     }
     
-    func exit(_ error: Error?) {
+    public func exit(_ error: Error?) {
         //        if coreDataContext.hasChanges {
         //            do {
         //                try coreDataContext.save()
