@@ -8,13 +8,13 @@ import CoreData
 
 public class ContextManager {
     
-    static var sharedManagedObjectContext: NSManagedObjectContext = ContextManager.getManagedObjectContext(type: .mainQueueConcurrencyType)
+    public static var sharedManagedObjectContext: NSManagedObjectContext = ContextManager.getManagedObjectContext(type: .mainQueueConcurrencyType)
     
-    init() {
+    public init() {
         ContextManager.sharedManagedObjectContext = ContextManager.getManagedObjectContext(type: .mainQueueConcurrencyType)
     }
     
-    static func getManagedObjectContext(type: NSManagedObjectContextConcurrencyType) -> NSManagedObjectContext {
+    public static func getManagedObjectContext(type: NSManagedObjectContextConcurrencyType) -> NSManagedObjectContext {
         // This resource is the same name as your xcdatamodeld contained in your project.
         guard let modelURL = Bundle.main.url(forResource: "Model", withExtension:"momd") else {
             fatalError("Error loading model from bundle")
@@ -47,7 +47,7 @@ public class ContextManager {
     /**
      * Delete the current context, and create a new global store.
      */
-    static func flushContext() {
+    public static func flushContext() {
         let context = ContextManager.sharedManagedObjectContext
         for store in (context.persistentStoreCoordinator?.persistentStores)! {
             do {

@@ -5,7 +5,7 @@
 import Foundation
 
 
-extension Int {
+public extension Int {
     
     var rank: String {
         get {

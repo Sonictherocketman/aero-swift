@@ -7,7 +7,7 @@ import Foundation
 import UIKit
 
 
-extension UIFont {
+public extension UIFont {
     
     /**
      * Mimics the functionality of `UIFont.preferredFontForTextStyle` but allows for a custom font family.

@@ -8,14 +8,14 @@ import Foundation
 import Locksmith
 
 
-enum KeyChainIdentifier: String {
+public enum KeyChainIdentifier: String {
     case UserAccount = "OAuthNetworingService.User"
 }
 
 /**
  * A simple class that contains a value dict that is persisted to the keychain on change.
  */
-class KeychainBackedToken {
+public class KeychainBackedToken {
     
     var value: [String: Any]? {
         get {

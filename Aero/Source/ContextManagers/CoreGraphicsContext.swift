@@ -9,29 +9,29 @@ import CoreGraphics
 /*!
  * Runs a block of draw code in a safe, new context.
  */
-class SafeCGContext: Context {
+public class SafeCGContext: Context {
     
-    var cgContext: CGContext?
+    public var cgContext: CGContext?
     
-    func enter() {
+    public func enter() {
         cgContext = UIGraphicsGetCurrentContext()
         cgContext?.saveGState()
     }
     
-    func exit(_ error: Error?) {
+    public func exit(_ error: Error?) {
         cgContext?.restoreGState()
     }
 }
 
 
-class TransparentCGContext: SafeCGContext {
+public class TransparentCGContext: SafeCGContext {
     
-    override func enter() {
+    override public func enter() {
         super.enter()
         cgContext?.beginTransparencyLayer(auxiliaryInfo: nil)
     }
     
-    override func exit(_ error: Error?) {
+    override public func exit(_ error: Error?) {
         super.exit(error)
         cgContext?.endTransparencyLayer()
     }

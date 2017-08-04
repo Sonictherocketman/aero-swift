@@ -1,38 +1,27 @@
-// NetworkServiceManager
-// A singleton object that manages a global instance of a networking service.
 //
-// author: Brian Schrader
+//  NetworkService.swift
+//  MyGeneRank
+//
+//  Created by Brian Schrader on 5/24/16.
+//  Copyright © 2016 Scripps Translational Science Institute, Inc. All rights reserved.
+//
 
 import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
 
-class NetworkServiceManager {
-
-    static var sharedManager = OAuthNetworkService()
-    static var isLoggedIn: Bool {
-        get { return NetworkServiceManager.sharedManager.storedToken.value != nil }
-    }
-    
-    /**
-     * Flush the current store of authentication tokens. To use the Network Service after a flush, 
-     * a fresh login is required.
-     */
-    static func flush() {
-        if NetworkServiceManager.isLoggedIn {
-            NetworkServiceManager.sharedManager.flushStoredToken()
-        }
-    }
+public class NetworkServiceManager {    
+    public static var sharedManager = NetworkService()
 }
 
 
-enum NetworkServiceNotification: String {
+public enum NetworkServiceNotification: String {
     case isReady = "NetworkService.IsReadyNotification"
     case isUnreachable = "NetworkService.NetworkIsUnreachableNotification"
 }
 
-enum NetworkServiceError: String {
+public enum NetworkServiceError: String {
     case InitialEndpointFetchFailure = "Failed to parse intial endpoints."
 }
 
@@ -41,23 +30,56 @@ enum NetworkServiceError: String {
  * A service that abstracts the underlying network calls and stores data
  * to the data store, or returns them in the completion handler.
  */
-class NetworkService {
+public class NetworkService {
     
     var endpoints: [String: String]?
     
-    var ready: Bool { get { return endpoints != nil } }
+    var _ready: Bool = false
+    public var ready: Bool {
+        get {
+            return _ready
+        }
+        set {
+            // Ensure that redundant notifications are not sent.
+            //            guard _ready != newValue else { return }
+            _ready = newValue
+            if _ready {
+                sendReadyNotification()
+            }
+        }
+    }
     
-    func configure(_ apiRootUrl: String) {
+    var _unreachable: Bool = false
+    public var isUnreachable: Bool {
+        get {
+            return _unreachable
+        }
+        set {
+            // Ensure that redundant notifications are not sent.
+            guard _unreachable != newValue else { return }
+            _unreachable = newValue
+            if _unreachable {
+                sendUnreachableNotification()
+            }
+        }
+    }
+    
+    public func configure(_ apiRootUrl: String) {
         let request = Alamofire.request(apiRootUrl, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
         request.responseJSON { (response: DataResponse) in
-            guard response.result.error == nil else { self.sendUnreachableNotification(); return }
+            guard response.result.error == nil else {
+                self.isUnreachable = true
+                self.ready = false
+                return
+            }
             guard let endpoints = response.result.value as? [String: String] else {
                 print(NetworkServiceError.InitialEndpointFetchFailure.rawValue)
                 return
             }
             
             self.endpoints = endpoints
-            self.sendReadyNotification()
+            self.ready = true
+            self.isUnreachable = false
         }
     }
     
@@ -82,15 +104,15 @@ class NetworkService {
     /*!
      * Fetch a results list from the given API endpoint.
      */
-    func getResults<T: RemoteResultProtocol>(_ url: String, params: [String: AnyObject]?, headers: [String: String]?,
-                                   completionHandler: @escaping (_ results: [T]?) -> ()) {
+    public func getResults<T: RemoteResultProtocol>(_ url: String, params: [String: AnyObject]?, headers: [String: String]?,
+                    completionHandler: @escaping (_ results: [T]?) -> ()) {
         self.request(.get, url, parameters: params, encoding: URLEncoding.default, headers: headers) { request in
             request.responseArray(queue: DispatchQueue.main, keyPath: "results", context: nil) { (results: DataResponse<[T]>) in
                 guard results.result.error == nil else {
-                    print(results.result.error!)
-                    self.sendUnreachableNotification()
-                    return
+                    self.isUnreachable = true
+                    completionHandler(nil); return
                 }
+                self.isUnreachable = false
                 completionHandler(results.result.value)
             }
         }
@@ -99,8 +121,8 @@ class NetworkService {
     /*!
      * Fetch a single item from the given API endpoint.
      */
-    func getObject<T: RemoteResultProtocol>(_ url: String, params: [String: AnyObject]?, headers: [String: String]?,
-                                  completionHandler: @escaping (_ result: T?) -> ()) {
+    public func getObject<T: RemoteResultProtocol>(_ url: String, params: [String: AnyObject]?, headers: [String: String]?,
+                   completionHandler: @escaping (_ result: T?) -> ()) {
         self.request(.get, url, parameters: params, encoding: URLEncoding.default, headers: headers) { request in
             request.responseObject { (result: DataResponse<T>) in
                 completionHandler(result.result.value)
@@ -111,7 +133,7 @@ class NetworkService {
     /*!
      * Post a given item to the given URL.
      */
-    func postObject<T: RemoteResultProtocol>(_ object: T, url: String, params: [String: AnyObject]?, headers: [String: String]?,
+    public func postObject<T: RemoteResultProtocol>(_ object: T, url: String, params: [String: AnyObject]?, headers: [String: String]?,
                     completionHandler: @escaping (_ result: T?) -> ()) {
         self.request(.post, url, parameters: self.serializeObjectParams(object, withParameters: params), encoding: JSONEncoding.default, headers: headers) { request in
             request.responseObject { (result: DataResponse<T>) in
@@ -134,22 +156,22 @@ class NetworkService {
     /*!
      * Delete a given item from the given API endpoint.
      */
-    func deleteObject<T: RemoteResultProtocol>(_ object: T, url: String, params: [String: AnyObject]?,
-                                     headers: [String: String]?, completionHandler: @escaping (DataResponse<Any>) -> ()) {
+    public func deleteObject<T: RemoteResultProtocol>(_ object: T, url: String, params: [String: AnyObject]?,
+                      headers: [String: String]?, completionHandler: @escaping (DataResponse<Any>) -> ()) {
         self.request(.delete, url, parameters: self.serializeObjectParams(object, withParameters: params), encoding: JSONEncoding.default, headers: headers) { request in
             request.responseJSON(completionHandler: completionHandler)
         }
     }
-
     
-    func uploadFile<T: RemoteResultProtocol>(_ filename: String, name: String, data: Data, with object: T, url: String,
-                             params: [String: AnyObject]?, headers: [String: String]?, completionHandler: @escaping (T?) -> ()) {
+    
+    public func uploadFile<T: RemoteResultProtocol>(_ filename: String, name: String, data: Data, with object: T, url: String,
+                    params: [String: AnyObject]?, headers: [String: String]?, completionHandler: @escaping (T?) -> ()) {
         guard let params = self.serializeObjectParams(object, withParameters: params) as? [String: String] else {
             assertionFailure("Parameters are not coerced to strings"); return
         }
         do {
             let (request, data) = try uploadRequestWith(url: url, headers: headers, parameters: params, filename: filename, name: name,
-                                                contentType: "application/octet-stream", data: data)
+                                                        contentType: "application/octet-stream", data: data)
             print(request.debugDescription)
             Alamofire.upload(data, with: request).responseObject { (result: DataResponse<T>) in
                 completionHandler(result.result.value)
@@ -195,13 +217,13 @@ class NetworkService {
         // add parameters
         var params = parameters.map { (key, value) in
             return boundary + "Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n\(value)"
-        }.joined()
+            }.joined()
         
         // add file
         params += boundary
         params += "Content-Disposition: form-data; name=\"\(name)\"; filename=\"\(filename)\"\r\n"
         params += "Content-Type: \(contentType)\r\n\r\n"
-
+        
         // Convert to data
         var uploadData = params.data(using: String.Encoding.utf8)!
         uploadData.append(data)

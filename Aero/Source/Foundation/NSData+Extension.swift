@@ -6,7 +6,7 @@ import Foundation
 
 // From: http://stackoverflow.com/questions/26501276/converting-hex-string-to-nsdata-in-swift#26502285
 
-extension Data {
+public extension Data {
     
     /// Create hexadecimal string representation of `Data` object.
     ///

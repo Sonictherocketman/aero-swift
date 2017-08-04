@@ -7,13 +7,13 @@ import CoreData
 
 
 public struct CoreDataContext: Context {
-    var coreDataContext: NSManagedObjectContext
+    public var coreDataContext: NSManagedObjectContext
     
-    init() {
+    public init() {
         coreDataContext = ContextManager.sharedManagedObjectContext
     }
     
-    init(newContext: Bool) {
+    public init(newContext: Bool) {
         if newContext {
             coreDataContext = ContextManager.getManagedObjectContext(type: .mainQueueConcurrencyType)
         } else {

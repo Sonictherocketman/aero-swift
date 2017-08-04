@@ -1,8 +1,10 @@
-// RemoteResultProtocol
-// A protcol that provides convenience functionality to models that 
-// map directly to RESTful endpoints.
 //
-// author: Brian Schrader
+//  RemoteResultProtocol.swift
+//  MyGeneRank
+//
+//  Created by Brian Schrader on 6/8/16.
+//  Copyright © 2016 Apple, Inc. All rights reserved.
+//
 
 import Foundation
 import Alamofire
@@ -12,7 +14,7 @@ import CoreData
 
 
 @objc(RemoteResultObjCProtocol)
-protocol RemoteResultObjCProtocol {
+public protocol RemoteResultObjCProtocol {
     static var serializedIdentifier: String { get set }
     var url: String? { get set }
 }
@@ -21,11 +23,11 @@ protocol RemoteResultObjCProtocol {
  * A protocol that provides convinience methods for mapping, querying, and persisting
  * data to a remote REST API using the NetworkService.
  */
-protocol RemoteResultProtocol: StaticMappable, RemoteResultObjCProtocol {
+public protocol RemoteResultProtocol: StaticMappable, RemoteResultObjCProtocol {
     //Just combines the two protocols.
 }
 
-extension RemoteResultProtocol {
+public extension RemoteResultProtocol {
     
     /*!
      * Fetch a single object from the remote API.
@@ -58,7 +60,7 @@ extension RemoteResultProtocol {
         NetworkServiceManager.sharedManager.getResults(endpoint, params: params as [String : AnyObject]?, headers: headers, completionHandler: completionHandler)
     }
     
-    /*! 
+    /*!
      * Post a new object, with a url based on it's type, to the remote API.
      */
     static func insert<T: RemoteResultProtocol>(_ object: T, params: [String: AnyObject]?, headers: [String: String]?, completionHandler: @escaping (_ result: T?) -> ()) {
@@ -66,7 +68,7 @@ extension RemoteResultProtocol {
             completionHandler(nil); return
         }
         NetworkServiceManager.sharedManager.postObject(object, url: endpoint, params: params, headers: headers,
-            completionHandler: completionHandler)
+                                                       completionHandler: completionHandler)
     }
     
     static func upload<T: RemoteResultProtocol>(_ object: T, filedata: Data, filename: String, name: String, params: [String: AnyObject]?,
@@ -85,7 +87,7 @@ extension RemoteResultProtocol {
     func save(_ headers: Dictionary<String, String>?, completionHandler: @escaping (_ response: DataResponse<Any>) -> ()) {
         NetworkServiceManager.sharedManager.putObject(self, url: self.url!, params: nil, headers: headers, completionHandler: completionHandler)
     }
-
+    
     func save() {
         NetworkServiceManager.sharedManager.putObject(self, url: self.url!, params: nil, headers: nil,
                                                       completionHandler: { _ in })
@@ -102,7 +104,7 @@ extension RemoteResultProtocol {
 
 //class InconsistentArrayElementsError : Error {
 //    var message: String?
-//    
+//
 //    convenience init(message: String?) {
 //        self.init()
 //        self.message = message
@@ -110,7 +112,7 @@ extension RemoteResultProtocol {
 //}
 //
 //extension Array where Iterator.Element : RemoteResultProtocol {
-//    
+//
 //    /**
 //     * Batch save a group of results to avoid excessive network traffic.
 //     */
@@ -120,11 +122,11 @@ extension RemoteResultProtocol {
 //        guard isSameTypes else {
 //            throw InconsistentArrayElementsError(message: "Not all array elements are of the same type. Expected type: \(type)")
 //        }
-//        
+//
 //        guard let element = first as? RemoteResultProtocol, let url = type.url else {
 //            completionHandler(nil); return
 //        }
-//        
+//
 //    }
 //}
 
@@ -132,13 +134,13 @@ extension RemoteResultProtocol {
  * A protocol that combines the features of RemoteResultProtocol and adds convinience
  * methods for NSManagedObject subclasses.
  */
-protocol ManagedRemoteObjectProtocol: RemoteResultProtocol, NSFetchRequestResult {
+public protocol ManagedRemoteObjectProtocol: RemoteResultProtocol, NSFetchRequestResult {
     static var defaultSortDescriptor: String? { get }
 }
 
-extension ManagedRemoteObjectProtocol {
+public extension ManagedRemoteObjectProtocol {
     
-    static func updateStoredData(_ completionHandler: @escaping ()->()) {
+    static func updateStoredData(_ completionHandler: @escaping (_ succcess: Bool)->()) {
         // Search for and remove existing entries.
         let request: NSFetchRequest<Self> = NSFetchRequest(entityName: NSStringFromClass(Self.self))
         
@@ -151,22 +153,22 @@ extension ManagedRemoteObjectProtocol {
         } catch {
             fatalError("Could not fetch objects.")
         }
-
+        
         search(nil, headers: nil) { (results: [Self]?) in
-            guard let _ = results else { completionHandler(); return }
+            guard let _ = results else { completionHandler(false); return }
             
             // Delete the old ones.
             for obj in objects {
                 ContextManager.sharedManagedObjectContext.delete(obj as! NSManagedObject)
             }
-
+            
             // Persist new records.
             do {
                 try ContextManager.sharedManagedObjectContext.save()
             } catch {
                 fatalError("Could not save new objects.")
             }
-            completionHandler()
+            completionHandler(true)
         }
     }
     
@@ -186,4 +188,24 @@ extension ManagedRemoteObjectProtocol {
         return objects
     }
     
+    static func fetchStoredObjects(n: Int) -> [Self] {
+        var objects: [Self] = []
+        with(CoreDataContext()) { (context: CoreDataContext) in
+            let request: NSFetchRequest<Self> = NSFetchRequest(entityName: NSStringFromClass(Self.self))
+            if let sort = defaultSortDescriptor {
+                request.sortDescriptors = [NSSortDescriptor(key: sort, ascending: true)]
+            }
+            request.fetchLimit = n
+            do {
+                objects = try context.coreDataContext.fetch(request)
+            } catch {
+                fatalError("Could not fetch activities.")
+            }
+        }
+        return objects
+    }
+}
+
+public class ManagedRemoteObjectProtocolSyncError: Error {
+    public init() {}
 }

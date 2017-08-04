@@ -4,7 +4,7 @@
 
 import Foundation
 
-extension Dictionary {
+public extension Dictionary {
     mutating func unionInPlace(
         _ dictionary: Dictionary<Key, Value>) {
         for (key, value) in dictionary {

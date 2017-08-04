@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		8A87CC2CC89B4AECDED7B877 /* Pods_Aero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55D6BEFFC1DDD74E7B0D9DD /* Pods_Aero.framework */; };
 		D69C02261E73362B00A30F65 /* ModelSyncServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69C02251E73362B00A30F65 /* ModelSyncServiceDelegate.swift */; };
+		D6B2B25F1F22BD0C0021EFB4 /* AeroLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2B25E1F22BD0C0021EFB4 /* AeroLabel.swift */; };
+		D6B2B2611F22BD5E0021EFB4 /* AeroCustomizableUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2B2601F22BD5E0021EFB4 /* AeroCustomizableUIElement.swift */; };
+		D6B2B2631F22C2A60021EFB4 /* AeroButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2B2621F22C2A60021EFB4 /* AeroButton.swift */; };
 		D6EA24171E55282C007F2B6D /* AeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24161E55282C007F2B6D /* AeroTests.swift */; };
-		D6EA24A41E5531A8007F2B6D /* Aero.h in Headers */ = {isa = PBXBuildFile; fileRef = D6EA24961E5531A8007F2B6D /* Aero.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6EA24AB1E5531C4007F2B6D /* Context+WithStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24321E552926007F2B6D /* Context+WithStatement.swift */; };
 		D6EA24AC1E5531C4007F2B6D /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24331E552926007F2B6D /* ContextManager.swift */; };
 		D6EA24AD1E5531C4007F2B6D /* CoreDataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24341E552926007F2B6D /* CoreDataContext.swift */; };
@@ -27,12 +29,60 @@
 		D6EA24B81E5531C4007F2B6D /* RemoteResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24431E552926007F2B6D /* RemoteResultProtocol.swift */; };
 		D6EA24B91E5531C4007F2B6D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24451E552926007F2B6D /* UIColor+Extension.swift */; };
 		D6EA24BA1E5531C4007F2B6D /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA24461E552926007F2B6D /* UIFont+Extension.swift */; };
+		D6EC99BD1F1D5EEF002102BD /* UITableView+AnimateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC99BC1F1D5EEF002102BD /* UITableView+AnimateExtensions.swift */; };
+		D6EC99BF1F1D5F04002102BD /* UIPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC99BE1F1D5F04002102BD /* UIPickerViewController.swift */; };
+		D6EC99C11F1D5F37002102BD /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC99C01F1D5F37002102BD /* Threading.swift */; };
+		D6EC99C41F1D5FA0002102BD /* CardPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC99C31F1D5FA0002102BD /* CardPresentationManager.swift */; };
+		D6EC99C61F1D5FBA002102BD /* CardTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC99C51F1D5FBA002102BD /* CardTransitionController.swift */; };
+		D6EC99E81F1D64CB002102BD /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D6EC99E71F1D64CB002102BD /* Podfile */; };
+		D6EC9A171F1D8B59002102BD /* UIImage+PNGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC9A161F1D8B59002102BD /* UIImage+PNGExtension.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6EC9A0C1F1D6B3A002102BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6EC9A041F1D6B39002102BD /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A61FF6F2C0BD05F5EFAFF6938D66546D;
+			remoteInfo = Alamofire;
+		};
+		D6EC9A0E1F1D6B3A002102BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6EC9A041F1D6B39002102BD /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D64680B9687870E2AD0705E4A8CF9FC3;
+			remoteInfo = AlamofireObjectMapper;
+		};
+		D6EC9A101F1D6B3A002102BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6EC9A041F1D6B39002102BD /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37689CC042A6705A7BF61A2580D62CF9;
+			remoteInfo = Locksmith;
+		};
+		D6EC9A121F1D6B3A002102BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6EC9A041F1D6B39002102BD /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7D393E3EC4916A5524860AC6A9B858D1;
+			remoteInfo = ObjectMapper;
+		};
+		D6EC9A141F1D6B3A002102BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6EC9A041F1D6B39002102BD /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 68CF3E88D0B9BE694E9FE542A242E74B;
+			remoteInfo = "Pods-Aero";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		12E2E92EA0CAEF621F86867B /* Pods-Aero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aero/Pods-Aero.debug.xcconfig"; sourceTree = "<group>"; };
 		2EB75382D7F0CF622E454E64 /* Pods-Aero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aero.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aero/Pods-Aero.release.xcconfig"; sourceTree = "<group>"; };
 		D69C02251E73362B00A30F65 /* ModelSyncServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSyncServiceDelegate.swift; sourceTree = "<group>"; };
+		D6B2B25E1F22BD0C0021EFB4 /* AeroLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AeroLabel.swift; path = Appearance/AeroLabel.swift; sourceTree = "<group>"; };
+		D6B2B2601F22BD5E0021EFB4 /* AeroCustomizableUIElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AeroCustomizableUIElement.swift; path = Appearance/AeroCustomizableUIElement.swift; sourceTree = "<group>"; };
+		D6B2B2621F22C2A60021EFB4 /* AeroButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AeroButton.swift; path = Appearance/AeroButton.swift; sourceTree = "<group>"; };
 		D6EA240B1E55282B007F2B6D /* Aero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aero.h; sourceTree = "<group>"; };
 		D6EA240C1E55282B007F2B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6EA24111E55282C007F2B6D /* AeroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,13 +104,15 @@
 		D6EA24431E552926007F2B6D /* RemoteResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteResultProtocol.swift; sourceTree = "<group>"; };
 		D6EA24451E552926007F2B6D /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D6EA24461E552926007F2B6D /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
-		D6EA24781E553157007F2B6D /* Aero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aero.h; sourceTree = "<group>"; };
-		D6EA24791E553157007F2B6D /* Aero.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aero.m; sourceTree = "<group>"; };
 		D6EA24941E5531A8007F2B6D /* Aero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Aero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6EA24961E5531A8007F2B6D /* Aero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aero.h; sourceTree = "<group>"; };
-		D6EA24971E5531A8007F2B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6EA24A11E5531A8007F2B6D /* AeroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroTests.swift; sourceTree = "<group>"; };
-		D6EA24A31E5531A8007F2B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6EC99BC1F1D5EEF002102BD /* UITableView+AnimateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+AnimateExtensions.swift"; sourceTree = "<group>"; };
+		D6EC99BE1F1D5F04002102BD /* UIPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPickerViewController.swift; sourceTree = "<group>"; };
+		D6EC99C01F1D5F37002102BD /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
+		D6EC99C31F1D5FA0002102BD /* CardPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardPresentationManager.swift; path = Transitions/CardPresentationManager.swift; sourceTree = "<group>"; };
+		D6EC99C51F1D5FBA002102BD /* CardTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTransitionController.swift; path = Transitions/CardTransitionController.swift; sourceTree = "<group>"; };
+		D6EC99E71F1D64CB002102BD /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		D6EC9A041F1D6B39002102BD /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		D6EC9A161F1D8B59002102BD /* UIImage+PNGExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+PNGExtension.swift"; sourceTree = "<group>"; };
 		F55D6BEFFC1DDD74E7B0D9DD /* Pods_Aero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,14 +144,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D6B2B2581F22BCC50021EFB4 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				D6B2B25E1F22BD0C0021EFB4 /* AeroLabel.swift */,
+				D6B2B2621F22C2A60021EFB4 /* AeroButton.swift */,
+				D6B2B2601F22BD5E0021EFB4 /* AeroCustomizableUIElement.swift */,
+			);
+			name = Appearance;
+			sourceTree = "<group>";
+		};
 		D6EA23CE1E5524CB007F2B6D = {
 			isa = PBXGroup;
 			children = (
+				D6EC9A041F1D6B39002102BD /* Pods.xcodeproj */,
 				D6EA240A1E55282B007F2B6D /* Aero */,
 				D6EA24151E55282C007F2B6D /* AeroTests */,
-				D6EA24771E553157007F2B6D /* Aero */,
-				D6EA24951E5531A8007F2B6D /* Aero */,
-				D6EA24A01E5531A8007F2B6D /* AeroTests */,
 				D6EA24091E55282B007F2B6D /* Products */,
 				599E0A22C71CABAA644363B2 /* Pods */,
 				E799582C4355BBEEB09C4C12 /* Frameworks */,
@@ -121,6 +181,7 @@
 				D6EA24301E552926007F2B6D /* Source */,
 				D6EA240B1E55282B007F2B6D /* Aero.h */,
 				D6EA240C1E55282B007F2B6D /* Info.plist */,
+				D6EC99E71F1D64CB002102BD /* Podfile */,
 			);
 			path = Aero;
 			sourceTree = "<group>";
@@ -173,6 +234,7 @@
 				D6EA243A1E552926007F2B6D /* Dictionary+Extention.swift */,
 				D6EA243B1E552926007F2B6D /* Int+Extension.swift */,
 				D6EA243C1E552926007F2B6D /* NSData+Extension.swift */,
+				D6EC99C01F1D5F37002102BD /* Threading.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -200,37 +262,36 @@
 		D6EA24441E552926007F2B6D /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				D6B2B2581F22BCC50021EFB4 /* Appearance */,
+				D6EC99C21F1D5F87002102BD /* Transitions */,
 				D6EA24451E552926007F2B6D /* UIColor+Extension.swift */,
 				D6EA24461E552926007F2B6D /* UIFont+Extension.swift */,
+				D6EC99BC1F1D5EEF002102BD /* UITableView+AnimateExtensions.swift */,
+				D6EC99BE1F1D5F04002102BD /* UIPickerViewController.swift */,
+				D6EC9A161F1D8B59002102BD /* UIImage+PNGExtension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		D6EA24771E553157007F2B6D /* Aero */ = {
+		D6EC99C21F1D5F87002102BD /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
-				D6EA24781E553157007F2B6D /* Aero.h */,
-				D6EA24791E553157007F2B6D /* Aero.m */,
+				D6EC99C31F1D5FA0002102BD /* CardPresentationManager.swift */,
+				D6EC99C51F1D5FBA002102BD /* CardTransitionController.swift */,
 			);
-			path = Aero;
+			name = Transitions;
 			sourceTree = "<group>";
 		};
-		D6EA24951E5531A8007F2B6D /* Aero */ = {
+		D6EC9A051F1D6B39002102BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D6EA24961E5531A8007F2B6D /* Aero.h */,
-				D6EA24971E5531A8007F2B6D /* Info.plist */,
+				D6EC9A0D1F1D6B3A002102BD /* Alamofire.framework */,
+				D6EC9A0F1F1D6B3A002102BD /* AlamofireObjectMapper.framework */,
+				D6EC9A111F1D6B3A002102BD /* Locksmith.framework */,
+				D6EC9A131F1D6B3A002102BD /* ObjectMapper.framework */,
+				D6EC9A151F1D6B3A002102BD /* Pods_Aero.framework */,
 			);
-			path = Aero;
-			sourceTree = "<group>";
-		};
-		D6EA24A01E5531A8007F2B6D /* AeroTests */ = {
-			isa = PBXGroup;
-			children = (
-				D6EA24A11E5531A8007F2B6D /* AeroTests.swift */,
-				D6EA24A31E5531A8007F2B6D /* Info.plist */,
-			);
-			path = AeroTests;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		E799582C4355BBEEB09C4C12 /* Frameworks */ = {
@@ -248,7 +309,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6EA24A41E5531A8007F2B6D /* Aero.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +359,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				TargetAttributes = {
 					D6EA24101E55282C007F2B6D = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -323,6 +383,12 @@
 			mainGroup = D6EA23CE1E5524CB007F2B6D;
 			productRefGroup = D6EA24091E55282B007F2B6D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D6EC9A051F1D6B39002102BD /* Products */;
+					ProjectRef = D6EC9A041F1D6B39002102BD /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D6EA24931E5531A8007F2B6D /* Aero */,
@@ -330,6 +396,44 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D6EC9A0D1F1D6B3A002102BD /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = D6EC9A0C1F1D6B3A002102BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D6EC9A0F1F1D6B3A002102BD /* AlamofireObjectMapper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AlamofireObjectMapper.framework;
+			remoteRef = D6EC9A0E1F1D6B3A002102BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D6EC9A111F1D6B3A002102BD /* Locksmith.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Locksmith.framework;
+			remoteRef = D6EC9A101F1D6B3A002102BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D6EC9A131F1D6B3A002102BD /* ObjectMapper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ObjectMapper.framework;
+			remoteRef = D6EC9A121F1D6B3A002102BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D6EC9A151F1D6B3A002102BD /* Pods_Aero.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_Aero.framework;
+			remoteRef = D6EC9A141F1D6B3A002102BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D6EA240F1E55282C007F2B6D /* Resources */ = {
@@ -343,6 +447,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6EC99E81F1D64CB002102BD /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +499,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6EC99C41F1D5FA0002102BD /* CardPresentationManager.swift in Sources */,
+				D6B2B2611F22BD5E0021EFB4 /* AeroCustomizableUIElement.swift in Sources */,
+				D6B2B2631F22C2A60021EFB4 /* AeroButton.swift in Sources */,
+				D6EC99C11F1D5F37002102BD /* Threading.swift in Sources */,
 				D6EA24AB1E5531C4007F2B6D /* Context+WithStatement.swift in Sources */,
 				D6EA24AC1E5531C4007F2B6D /* ContextManager.swift in Sources */,
 				D6EA24AD1E5531C4007F2B6D /* CoreDataContext.swift in Sources */,
@@ -401,14 +510,19 @@
 				D6EA24AF1E5531C4007F2B6D /* DispatchGroupResultStore.swift in Sources */,
 				D6EA24B01E5531C4007F2B6D /* Array+Extension.swift in Sources */,
 				D6EA24B11E5531C4007F2B6D /* Dictionary+Extention.swift in Sources */,
+				D6EC99BD1F1D5EEF002102BD /* UITableView+AnimateExtensions.swift in Sources */,
 				D6EA24B21E5531C4007F2B6D /* Int+Extension.swift in Sources */,
 				D6EA24B31E5531C4007F2B6D /* NSData+Extension.swift in Sources */,
 				D6EA24B41E5531C4007F2B6D /* KeychainBackedTokenStorage.swift in Sources */,
+				D6EC9A171F1D8B59002102BD /* UIImage+PNGExtension.swift in Sources */,
 				D6EA24B51E5531C4007F2B6D /* ModelSyncService.swift in Sources */,
+				D6EC99C61F1D5FBA002102BD /* CardTransitionController.swift in Sources */,
 				D6EA24B61E5531C4007F2B6D /* NetworkService.swift in Sources */,
+				D6B2B25F1F22BD0C0021EFB4 /* AeroLabel.swift in Sources */,
 				D6EA24B71E5531C4007F2B6D /* OAuthNetworkService.swift in Sources */,
 				D6EA24B81E5531C4007F2B6D /* RemoteResultProtocol.swift in Sources */,
 				D6EA24B91E5531C4007F2B6D /* UIColor+Extension.swift in Sources */,
+				D6EC99BF1F1D5F04002102BD /* UIPickerViewController.swift in Sources */,
 				D6EA24BA1E5531C4007F2B6D /* UIFont+Extension.swift in Sources */,
 				D69C02261E73362B00A30F65 /* ModelSyncServiceDelegate.swift in Sources */,
 			);
@@ -420,12 +534,18 @@
 		D6EA23D31E5524CB007F2B6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -446,12 +566,18 @@
 		D6EA23D41E5524CB007F2B6D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -577,6 +703,7 @@
 			baseConfigurationReference = 12E2E92EA0CAEF621F86867B /* Pods-Aero.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -606,7 +733,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = Aero/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brianschrader.Aero;
@@ -627,6 +754,7 @@
 			baseConfigurationReference = 2EB75382D7F0CF622E454E64 /* Pods-Aero.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -651,7 +779,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = Aero/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brianschrader.Aero;

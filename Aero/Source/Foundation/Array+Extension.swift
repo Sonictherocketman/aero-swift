@@ -1,12 +1,9 @@
-// Array+Functional+Extension.swift
-// A set of functional methods for arrays.
-//
-// author: Brian Schrader
-// since: 2/6/17.
-
 import Foundation
 
-extension Array {
+//  Array+Functional+Extension.swift
+//  A set of functional methods for arrays.
+//  Created by Brian Schrader on 2/6/17.
+public extension Array {
     
     /**
      * Determine if all elements in the array are true.
@@ -45,5 +42,15 @@ extension Array {
             }
         }
         return false
+    }
+}
+
+
+public extension Array {
+    func splitBy(subSize: Int) -> [[Element]] {
+        return stride(from: 0, to: underestimatedCount, by: subSize).map { startIndex in
+            let endIndex = startIndex + subSize <= underestimatedCount ? startIndex + subSize : underestimatedCount
+            return Array(self[startIndex ..< endIndex])
+        }
     }
 }
